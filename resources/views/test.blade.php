@@ -8,7 +8,7 @@
 	<meta name="author" content="name">
   <meta name="description" content="description here">
 	<meta name="keywords" content="keywords,here">
-           <!-- Scripts -->
+           <!-- Scripts asdfljkasdf -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-400 font-sans leading-normal tracking-normal">
