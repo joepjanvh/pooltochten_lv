@@ -100,7 +100,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
+                <div class="sm:flex justify-center mt-4 sm:items-center sm:justify-between">
                     <div class="text-center text-sm text-gray-500 sm:text-left">
                         <div class="flex items-center">
                             <div class="flex align-top h-10 w-40 pl-2 inline-block">
@@ -123,7 +123,7 @@
                         </div>
                     </div>
 
-                    <div class="ml-4 text-center text-xs text-gray-500 sm:text-right sm:ml-0">
+                    <div class=" ml-4 text-center text-xs text-gray-500 sm:text-right sm:ml-0">
                         Pooltochten 2022&#169; (version {{  date(" d/m/y H:i",FILEMTIME("updatefile")) }})
                     </div>
                 </div>
