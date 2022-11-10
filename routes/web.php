@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 //testroute
 
 Route::get('/test', function () {
@@ -25,5 +27,9 @@ Route::get('/test', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/backend', function () {
+    return view('backend');
+})->middleware(['auth', 'verified'])->name('backend');
 
 require __DIR__.'/auth.php';

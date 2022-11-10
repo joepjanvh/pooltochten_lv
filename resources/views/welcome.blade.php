@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -17,16 +17,19 @@
 
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class="relative sm:flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                <div class=" fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                        <button onclick="location.href='{{ url('/dashboard') }}'" type="button"class="rounded-full  w-24  bg-gray-300 ">Dashboard</button>
+                        <!-- <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a> --> 
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
+                        <!-- <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>--> 
+                        <button onclick="location.href='{{ route('login') }}'" type="button"class="rounded-full w-24  bg-gray-300 ">Login</button>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                            
+                            <!--  <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>-->
+                             <button onclick="location.href='{{ route('register') }}'" type="button"class="rounded-full  w-24  bg-gray-300 ">Register</button>
                         @endif
                     @endauth
                 </div>
@@ -35,9 +38,11 @@
             <!-- div voor vak op pagina --> 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <!-- div voor logo -->
+                
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <x-application-logo class="block h-28 w-auto fill-current text-gray-600" />
                 </div>
+
 
                 <div class="mt-4 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
