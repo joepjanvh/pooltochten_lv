@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfilesController;
+use App\Http\Controllers\PostsController;
+Route::get('/user/{id}', [UserController::class, 'show']);
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +31,17 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+//profile link
+Route::get('/profile/{user}', [ProfilesController::class, 'index'])->name('profile.show');
+
+//post creat link
+Route::get('/p/create', [PostsController::class, 'create'])->name('posts.create');
+
+//post store
+Route::post('/p', [PostsController::class, 'store'])->name('posts.store');
+
 Route::get('/backend', function () {
-    return view('backend');
+    return view('profiles.index');
 })->middleware(['auth', 'verified'])->name('backend');
 
 require __DIR__.'/auth.php';
