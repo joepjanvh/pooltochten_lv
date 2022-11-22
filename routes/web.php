@@ -34,14 +34,20 @@ Route::get('/dashboard', function () {
 //profile link
 Route::get('/profile/{user}', [ProfilesController::class, 'index'])->name('profile.show');
 
+
+
+//route after login disabled
+//Route::get('/backend/{user}', [ProfilesController::class, 'index'])->name('backend');
+
 //post creat link
 Route::get('/p/create', [PostsController::class, 'create'])->name('posts.create');
 
 //post store
 Route::post('/p', [PostsController::class, 'store'])->name('posts.store');
 
+//route after login and personal page
 Route::get('/backend', function () {
-    return view('profiles.index');
+    return view('dashboard');
 })->middleware(['auth', 'verified'])->name('backend');
 
 require __DIR__.'/auth.php';

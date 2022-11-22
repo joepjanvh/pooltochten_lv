@@ -58,6 +58,11 @@
                             
                                 <img class="object-cover aspect-square hover:brightness-75 " src="/storage/{{ $post->image }}">
                             </a>
+                            <div class="relative bottom-20 h-20 left-0 right-0 px-4 py-2 bg-gray-800 opacity-50">
+                                <h3 class="text-xl text-white font-bold">
+                                    {{ $post->hike }}</h3>
+                                <p class="text-sm text-gray-300">{{ $post->caption }}</p>
+                            </div>
                         </div>
 
                         @endforeach
