@@ -21,8 +21,9 @@
             @if (Route::has('login'))
                 <div class=" fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <button onclick="location.href='{{ url('/backend') }}'" type="button"class="rounded-full  w-24  bg-gray-300 ">Dashboard</button>
+                        <!-- <button onclick="location.href='{{ url('/backend') }}'" type="button"class="rounded-full  w-24  bg-gray-300 ">My Profile</button> --> 
                         <!-- <a href="{{ url('/backend') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a> --> 
+                        <button onclick="location.href='{{ url('/profile') . ('/'). auth()->user()->id }}'" type="button"class="rounded-full  w-24  bg-gray-300 ">My Profile</button>
                     @else
                         <!-- <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>--> 
                         <button onclick="location.href='{{ route('login') }}'" type="button"class="rounded-full w-24  bg-gray-300 ">Login</button>
