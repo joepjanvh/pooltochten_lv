@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold  text-xl text-gray-800 leading-tight">
-            {{ __('backend') }}
+            <button onclick="location.href='{{ url('/profile') . ('/'). auth()->user()->id }}'" type="button"class="rounded-full  w-24  bg-gray-300 ">My Profile</button>
         </h2>
     </x-slot>
 

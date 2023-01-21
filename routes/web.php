@@ -17,7 +17,7 @@ Route::get('/user/{id}', [UserController::class, 'show']);
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
 
 
@@ -27,9 +27,9 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+//Route::get('/dashboard', function () {
+//    return view('dashboard');
+//})->middleware(['auth', 'verified'])->name('dashboard');
 
 //profile link
 Route::get('/profile/{user}', [ProfilesController::class, 'index'])->name('profile.show');
@@ -49,5 +49,6 @@ Route::post('/p', [PostsController::class, 'store'])->name('posts.store');
 Route::get('/backend', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('backend');
+
 
 require __DIR__.'/auth.php';
